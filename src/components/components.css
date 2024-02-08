@@ -1,0 +1,90 @@
+.navbar{
+
+    margin-top: 0px;
+    margin-bottom: 30px;
+    height: 60px;
+    background-color: #212529;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 3px 3px  #495057;
+
+    left: 0;
+    right: 0;
+}
+
+
+.box{
+    min-width:  300px;
+    max-width: fit-content;
+    min-height: 30%;
+
+
+    text-align: center;
+
+    border: 3px solid;
+    border-radius: 7px;
+    border-color: #495057;
+    box-shadow: 2px 2px 4px #495057;
+    background-color: #212529;
+    
+    margin: auto;
+}
+
+
+
+.libutton{
+    color: white;
+    padding: 0px 32px;
+    height: 100%;
+    line-height: 60px;
+}
+.libutton:hover{
+    background-color: #495057;
+    cursor: pointer;
+}
+.libutton:active{
+    background-color: #fff;
+}
+
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float: right;
+}
+
+
+label{
+    width: 80px;
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    display: inline-block;
+}
+
+input{
+    width: 150px;
+}
+
+br{
+    display: block;
+}
+button{
+    margin: 10px;
+}
+button:hover{
+    background-color:#495057;
+}
+button:active{
+    background-color: white;
+}
+
+
+.popup{
+    background-color: red;
+    margin: auto;
+
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
