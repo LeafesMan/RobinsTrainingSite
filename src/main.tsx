@@ -7,6 +7,7 @@ import Signup from './pages/Signup.tsx'
 import ResizeableBox from './components/ResizeableBox.tsx'
 import Navbar from './components/Navbar.tsx'
 import Signin from './pages/Signin.tsx'
+import Dashboard from './pages/Dashboard.tsx'
 
 
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
   path: "/",
   element: <><Navbar /><h1>Home</h1></>,
+  },
+  {
+    path:"/dashboard",
+    element: <Dashboard />,
   },
   {
   path: "/signup",
