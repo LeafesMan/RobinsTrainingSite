@@ -7,9 +7,13 @@ import EmailPasswordForm from "../components/EmailPasswordForm.tsx";
 
 function Signup(){
     // Vars
-    const [signupData, setSignupData] = useState({password:"", email: ""});
+    const [signupData, setSignupData] = useState({password:"", email: "", squadron: "", firstName: "", lastName: ""});
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
+    //const [firstName, setFirstName] = useState("");
+    //const [lastName, setLastName] = useState("");
+    //const [squadron, setSquadron] = useState("");
+
     const navigate = useNavigate();
 
     // Generic Update State Function
@@ -52,8 +56,11 @@ function Signup(){
             nofearCompletionTime: new Timestamp(0,0),
             recordsProgress: 0,
             recordsCompletionTime: new Timestamp(0,0),
-    
+            squadron: signupData.squadron,
+            firstName: signupData.firstName,
+            lastName: signupData.lastName
         }
+
         SetDoc(userData, "users/" + signupData.email);
         
     

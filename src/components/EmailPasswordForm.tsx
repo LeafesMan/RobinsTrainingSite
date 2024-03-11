@@ -6,7 +6,7 @@ import ErrorMessage from "./ErrorMessage";
         title: string,
         showError: boolean,
         errorMessage: string,
-        formData: {email:string, password:string},
+        formData: {email:string, password:string, firstName:string, lastName:string, squadron:string},
         onSubmit: (e: React.FormEvent) => void,
         onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     }
@@ -22,6 +22,33 @@ function EmailPasswordForm(props: Props){
                     type="text"
                     name="email"
                     value={props.formData["email"]}
+                    onChange={props.onChange}
+                    required>
+                </input>
+                <br></br>
+                <label>First Name: </label>
+                <input 
+                    type="text"
+                    name="firstName" 
+                    value={props.formData["firstName"]} 
+                    onChange={props.onChange}
+                    required>
+                </input>
+                <br></br>
+                <label>Last Name: </label>
+                <input 
+                    type="text"
+                    name="lastName" 
+                    value={props.formData["lastName"]} 
+                    onChange={props.onChange}
+                    required>
+                </input>
+                <br></br>
+                <label>Squadron: </label>
+                <input 
+                    type="text"
+                    name="squadron" 
+                    value={props.formData["squadron"]} 
                     onChange={props.onChange}
                     required>
                 </input>
