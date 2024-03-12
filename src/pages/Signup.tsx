@@ -82,7 +82,7 @@ function Signup(){
 
     // React Component
     return <>
-        <EmailPasswordForm title="Signup" errorMessage={errorMessage} showError={showError} formData={signupData} onSubmit={HandleSubmit} onChange={HandleChange}/>
+        <EmailPasswordForm  formType="signup" title="Signup" errorMessage={errorMessage} showError={showError} formData={signupData} onSubmit={HandleSubmit} onChange={HandleChange}/>
     </>;
 }
 
