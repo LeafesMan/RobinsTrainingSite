@@ -8,6 +8,8 @@ import { auth } from "../firebase.ts";
 import { FirebaseError } from "firebase/app";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { database } from '../firebase'; //Import database
+import { getUserData } from '../components/firestoreUtils';
+
 
 
 function Signin() {
@@ -38,21 +40,6 @@ function Signin() {
         try {
             const userCredential = await signInWithEmailAndPassword(auth, signinData.email, signinData.password);
             const user = userCredential.user;
-            const uid = user.uid; // Assuming UID is based on email
-
-            // Fetch additional user data from Firestore based on UID
-            /*const userDoc = await getDoc(doc(database, "users", uid));
-            if (userDoc.exists()) {
-                const userData = userDoc.data();
-                const { firstName, lastName } = userData;
-
-                // Update state with user's first and last name
-                setSigninData(prevState => ({
-                    ...prevState,
-                    setSigninData.firstName: firstName,
-                    lastName: lastName
-                }));
-            }*/
 
             navigate("/dashboard");
         } catch (error) {
