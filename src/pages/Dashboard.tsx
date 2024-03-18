@@ -1,60 +1,60 @@
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { auth } from "../firebase.ts";
-import { getUserData } from '../components/firestoreUtils';
-import SignIn from './Signin.tsx'; // Renamed Sigin to SignIn for consistency
+import { auth, database } from "../firebase.ts";
+import { useLocation } from 'react-router-dom';
+import { getUserData } from "../components/FirestoreUtils.tsx";
 
-interface User {
+interface UserData {
+
     firstName: string;
+    lastName: string;
+    squadron: string;
+    nofearCompletionTime: string;
+    recordsCompletionTime: string;
+    stinfoCompletionTime: string;
+    nofearProgress: number;
+    recordsProgress: number;
+    stinfoProgress: number;
 }
 
 function Dashboard(): JSX.Element {
-    const [errorMessage, setErrorMessage] = useState<string>(""); // State for error message
+    const [errorMessage, setErrorMessage] = useState<string>("");
     const navigate = useNavigate();
+    const [userData, setUserData] = useState<UserData | null>(null); // Initialize userData state
 
-    const [user, setUser] = useState<User | null>(null); // Specify the type for user
 
     useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(async (userAuth) => {
-            if (userAuth) {
-                // User is signed in
-                const userData = await getUserData(userAuth.uid);
-                setUser(userData);
-            } else {
-                // User is signed out
-                setUser(null);
+        const fetchData = async () => {
+            const userDataString = localStorage.getItem("userData");
+            if (userDataString) {
+                const userEmail = JSON.parse(userDataString);
+                const userData = await getUserData(userEmail);
+                setUserData(userData);
             }
-        });
+        };
 
-        return () => unsubscribe();
-    }, []);
-
-    const handleSignOut = async () => {
-        try {
-            await auth.signOut();
-            // Optionally, you can add some feedback to the user upon successful sign-out
-            console.log("User signed out successfully");
-        } catch (error: any) {
-            // Handle sign-out error
-            console.error("Sign out error:", error.message);
-            setErrorMessage("Failed to sign out. Please try again later.");
-        }
-    };
+        fetchData(); // Fetch user data when component mounts
+    }, []); // Empty dependency array to run effect only once
 
     return (
         <>
             <Navbar />
             <div>
-                {user ? (
-                    <div>
-                        <h1>Welcome, {user.firstName}</h1>
-                        <button onClick={handleSignOut}>Sign out</button>
-                    </div>
+                {userData ? (
+                    <>
+                        <h1>Welcome, {userData.firstName}</h1>
+                        <div style={{ textAlign: 'center' }}>
+                            <p>STINFO Progress: {userData.stinfoProgress}%</p>
+                            <p>No Fears Act Progress: {userData.nofearProgress}%</p>
+                            <p>Records Management Progress: {userData.recordsProgress}%</p>
+                        </div>
+                    </>
                 ) : (
-                    null
+                    <div style={{ textAlign: 'center' }}>
+                        <p>Please log in to access the dashboard page</p>
+                    </div>
                 )}
-                {errorMessage && <p>{errorMessage}</p>} {/* Display error message if present */}
             </div>
         </>
     );
