@@ -35,8 +35,12 @@ function Navbar() {
         fetchData(); // Fetch user data when component mounts
     }, []); // Empty dependency array to run effect only once
 
+    const [showDropdown, setShowDropdown] = useState(false);
 
-
+    // Toggle dropdown visibility
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
 
 
     return <div className='navbar'>
@@ -52,14 +56,18 @@ function Navbar() {
                 <div className='floatRight libutton' onClick={() => { localStorage.clear(); signOut(auth); navigate("/signin"); }}> Sign In </div>
             )}
         </div>
-        <div>
+        <div className='floatRight libutton' onClick={toggleDropdown}>
             {userData ? (
-                <div className='floatRight libutton' onClick={() => navigate("/dashboard")}>
-                    {userData?.firstName}
-                </div>
+                userData.firstName
             ) : (
-                <div className='floatRight libutton' onClick={() => navigate("/dashboard")}>
-                    Profile
+                'Profile'
+            )}
+            {showDropdown && (
+                <div className='dropdown-content'>
+                    <div onClick={() => navigate("/dashboard")}>Dashboard</div>
+                    <div onClick={() => navigate("/profile")}>Profile</div>
+                    <div onClick={() => navigate("/certificates")}>Certifcates</div>
+
                 </div>
             )}
         </div>

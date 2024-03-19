@@ -8,6 +8,8 @@ import ResizeableBox from './components/ResizeableBox.tsx'
 import Navbar from './components/Navbar.tsx'
 import Signin from './pages/Signin.tsx'
 import Dashboard from './pages/Dashboard.tsx'
+import Profile from './pages/Profile.tsx'
+import Certs from './pages/Certs.tsx'
 
 
 
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
   {
   path: "/management",
   element: <><Navbar /><h1>Management</h1></>,
+  },
+  {
+    path:"/profile",
+    element: <Profile />,
+  },
+  {
+    path: "/certificates",
+    element: <Certs />,
   },
 ])
 
