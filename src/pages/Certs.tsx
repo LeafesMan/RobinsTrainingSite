@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { auth, database } from "../firebase.ts";
 import { useLocation } from 'react-router-dom';
 import { getUserData } from "../components/FirestoreUtils.tsx";
+import "../components/certs.css"
 
 interface UserData {
 
@@ -18,7 +19,7 @@ interface UserData {
     stinfoProgress: number;
 }
 
-function Profile() {
+function Certs() {
     const [userData, setUserData] = useState<UserData | null>(null); 
     const [email, setEmail] = useState();
 
@@ -54,7 +55,7 @@ function Profile() {
                     </>
 
                 ) : (
-                    <div>
+                    <div className="text">
                         <p>Sign In To Access Your Certifcates</p>
                     </div>
                 )}
@@ -63,4 +64,4 @@ function Profile() {
     )
 }
 
-export default Profile;
+export default Certs;

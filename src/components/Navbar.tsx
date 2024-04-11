@@ -47,7 +47,6 @@ function Navbar() {
         <div className='floatLeft libutton' onClick={() => navigate("/stinfo")}> STINFO</div>
         <div className='floatLeft libutton' onClick={() => navigate("/nofear")}> No Fear Act</div>
         <div className='floatLeft libutton' onClick={() => navigate("/records")}> Records Management</div>
-        <div className='floatLeft libutton' onClick={() => navigate("/management")}> Management</div>
 
         <div>
             {userData ? (

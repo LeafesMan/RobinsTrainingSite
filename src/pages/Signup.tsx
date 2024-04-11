@@ -2,8 +2,9 @@ import { Timestamp } from "firebase/firestore";
 import { SetDoc, GetDoc, auth } from "../firebase.ts";
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import EmailPasswordForm from "../components/EmailPasswordForm.tsx";
+
 
 function Signup() {
     const [signupData, setSignupData] = useState({
@@ -18,9 +19,14 @@ function Signup() {
     const [errorMessage, setErrorMessage] = useState("");
     const navigate = useNavigate();
 
-    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-        setSignupData(prevState => ({ ...prevState, [e.target.name]: e.target.value }));
-    }
+    function handleChange(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) {
+    const { name, value } = e.target;
+    setSignupData(prevState => ({
+        ...prevState,
+        [name]: value
+    }));
+}
+
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
@@ -78,8 +84,11 @@ function Signup() {
                 showError={showError}
                 formData={signupData}
                 onSubmit={handleSubmit}
-                onChange={handleChange}
+                onInputChange={handleChange}
+                onSelectChange={handleChange}
             />
+            <hr className="short-hr"></hr>
+            <Link to="/signin" className="link">Already have an account?</Link>
         </>
     );
 }

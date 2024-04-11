@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { auth, database } from "../firebase.ts";
 import { useLocation } from 'react-router-dom';
 import { getUserData } from "../components/FirestoreUtils.tsx";
+import "../components/dashboard.css"
 
 interface UserData {
 
@@ -51,7 +52,7 @@ function Dashboard(): JSX.Element {
                         </div>
                     </>
                 ) : (
-                    <div style={{ textAlign: 'center' }}>
+                    <div className="text">
                         <p>Please log in to access the dashboard page</p>
                     </div>
                 )}

@@ -1,8 +1,9 @@
 import { collection, doc, getDoc } from "firebase/firestore";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import EmailPasswordForm from "../components/EmailPasswordForm";
 import Navbar from "../components/Navbar";
+import "../components/components.css"
 import ResizeableBox from "../components/ResizeableBox";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, database } from "../firebase.ts"; //Import database
@@ -13,12 +14,14 @@ function Signin() {
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
-  function HandleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setSigninData((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
+  function handleChange(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>) {
+    const { name, value } = e.target;
+    setSigninData(prevState => ({
+        ...prevState,
+        [name]: value
     }));
-  }
+}
+
 
   async function HandleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -57,15 +60,23 @@ function Signin() {
     <>
       <Navbar />
       <ResizeableBox>
-        <EmailPasswordForm
-          formType="login"
-          title="Sign In"
-          errorMessage={errorMessage}
-          showError={showError}
-          formData={signinData}
-          onSubmit={HandleSubmit}
-          onChange={HandleChange}
-        />
+        <div>
+          <EmailPasswordForm
+            formType="login"
+            title="Login"
+            errorMessage={errorMessage}
+            showError={showError}
+            formData={signinData}
+            onSubmit={HandleSubmit}
+            onInputChange={handleChange}
+            onSelectChange={handleChange}
+          />
+          <Link to="/forgot-password" className="link"> Forgot Password?</Link>
+          <hr className="short-hr"></hr>
+          <button className="button-with-link">
+            <a href="/signup">Create New Account</a>
+          </button>
+        </div>
       </ResizeableBox>
     </>
   );

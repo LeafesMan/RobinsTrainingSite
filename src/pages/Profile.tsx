@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { auth, database } from "../firebase.ts";
 import { useLocation } from 'react-router-dom';
 import { getUserData } from "../components/FirestoreUtils.tsx";
+import "../components/profile.css"
 
 interface UserData {
 
@@ -57,7 +58,7 @@ function Profile() {
                     </>
 
                 ) : (
-                    <div>
+                    <div className="text">
                         <p>Sign In To Access User Profile</p>
                     </div>
                 )}

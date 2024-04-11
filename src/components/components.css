@@ -66,6 +66,7 @@ br {
 
 button {
     margin: 10px;
+    background-color: rgb(27, 121, 252);
 }
 
 button:hover {
@@ -75,6 +76,11 @@ button:hover {
 button:active {
     background-color: white;
 }
+
+.button-with-link a {
+    color: black;
+    text-decoration: none; 
+  }
 
 .popup {
     background-color: red;
@@ -86,13 +92,13 @@ button:active {
 .dropdown-content {
     display: flex;
     flex-direction: column;
-    position: sticky; 
+    position: sticky;
     top: 100%;
     right: 0;
     background-color: #212529;
     min-width: 160px;
     z-index: 1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content div {
@@ -103,3 +109,12 @@ button:active {
 .dropdown-content div:hover {
     background-color: #495057;
 }
+
+.link {
+    display: flex;
+    justify-content: center;
+}
+
+.short-hr {
+    width: 50%; /* Adjust the width as needed */
+  }

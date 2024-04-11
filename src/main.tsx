@@ -10,6 +10,7 @@ import Signin from './pages/Signin.tsx'
 import Dashboard from './pages/Dashboard.tsx'
 import Profile from './pages/Profile.tsx'
 import Certs from './pages/Certs.tsx'
+import ForgotPassword from './pages/ForgotPassword.tsx'
 
 
 
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: "/certificates",
     element: <Certs />,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPassword />,
   },
 ])
 
