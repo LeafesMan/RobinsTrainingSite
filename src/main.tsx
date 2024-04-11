@@ -7,7 +7,7 @@ import Signup from './pages/Signup.tsx'
 import ResizeableBox from './components/ResizeableBox.tsx'
 import Navbar from './components/Navbar.tsx'
 import Signin from './pages/Signin.tsx'
-import UnityGame from './components/UnityGame.tsx'
+import NoFearAct from './pages/NoFearAct.tsx'
 
 
 
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/nofear",
-    element: <><Navbar /><h1>No Fear Act Training</h1><UnityGame buildName='nofearact'/></>,
+    element: <><Navbar /><h1>No Fear Act Training</h1><NoFearAct></NoFearAct></>
   },
   {
     path: "/records",
