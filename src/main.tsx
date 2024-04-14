@@ -8,6 +8,7 @@ import ResizeableBox from './components/ResizeableBox.tsx'
 import Navbar from './components/Navbar.tsx'
 import Signin from './pages/Signin.tsx'
 import NoFearAct from './pages/NoFearAct.tsx'
+import STINFO from './pages/STINFO.tsx';
 
 
 
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
   },
   {
   path: "/stinfo",
-  element: <><Navbar /><h1>STINFO Training</h1></>,
+  element: <><Navbar /><h1>STINFO Training</h1><STINFO/></>,
   },
   {
     path: "/nofear",
