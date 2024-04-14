@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { auth, database } from "../firebase.ts";
 import { useLocation } from 'react-router-dom';
-import { getUserData } from "../components/FirestoreUtils.tsx";
+import { getUserData } from "../components/firestoreUtils.tsx";
 import "../components/dashboard.css"
 
 interface UserData {
