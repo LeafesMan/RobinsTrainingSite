@@ -17,6 +17,7 @@ interface UserData {
     nofearProgress: number;
     recordsProgress: number;
     stinfoProgress: number;
+    admin: boolean;
 }
 
 function Dashboard(): JSX.Element {
@@ -49,6 +50,12 @@ function Dashboard(): JSX.Element {
                             <p>STINFO Progress: {userData.stinfoProgress}%</p>
                             <p>No Fears Act Progress: {userData.nofearProgress}%</p>
                             <p>Records Management Progress: {userData.recordsProgress}%</p>
+
+                            {userData.admin === true ? (
+                                <p>You're an admin!</p>
+                            ) : (
+                                <p>You're a regular user.</p>
+                            )}
                         </div>
                     </>
                 ) : (
@@ -56,6 +63,7 @@ function Dashboard(): JSX.Element {
                         <p>Please log in to access the dashboard page</p>
                     </div>
                 )}
+
             </div>
         </>
     );

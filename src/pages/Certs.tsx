@@ -17,6 +17,7 @@ interface UserData {
     nofearProgress: number;
     recordsProgress: number;
     stinfoProgress: number;
+    admin: boolean;
 }
 
 function Certs() {

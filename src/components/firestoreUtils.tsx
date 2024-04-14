@@ -11,6 +11,7 @@ interface UserData {
   nofearProgress: number;
   recordsProgress: number;
   stinfoProgress: number;
+  admin: boolean;
 }
 
 async function getUserData(email: string): Promise<UserData | null> {
