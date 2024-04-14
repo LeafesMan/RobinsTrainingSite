@@ -35,3 +35,22 @@ export async function GetDoc(path: string) : Promise<DocumentSnapshot>{
 export async function SetDoc(data: object, path:string){
     const docRef = await setDoc(doc(database, path), data);
 }
+
+
+
+export function GetActiveUserEmail() : string{
+  // Get Email
+  const email = auth.currentUser?.email;
+  if(email == null) {console.log("User Email Uknown!"); throw new Error("Email Uknown!")}
+
+  return email;
+}
+export async function GetUserData(email: string) : Promise<any>{
+// Get Doc
+const userDoc = await GetDoc("users/" + email);
+if(!userDoc.exists()) throw new Error("User Doc doesn't exist!");
+const data = userDoc.data();
+
+return data;
+
+}
