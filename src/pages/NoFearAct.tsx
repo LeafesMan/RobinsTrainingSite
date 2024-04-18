@@ -8,6 +8,7 @@ import { ReactUnityEventParameter } from "react-unity-webgl/distribution/types/r
 import { GetActiveUserEmail, GetUserData, SetDoc } from "../firebase";
 import { Timestamp } from "firebase/firestore";
 
+const maxAttempts = 3;
 
 function NoFearAct(){
     const buildContext = GetBuildContext("nofearact");
@@ -26,7 +27,7 @@ function NoFearAct(){
         if(data.nofearActsCompleted) buildContext.sendMessage("Acts", "OnModuleCompleted");
         if(data.nofearDartsCompleted) buildContext.sendMessage("Darts", "OnModuleCompleted");
         if(data.nofearDoctorCompleted) buildContext.sendMessage("Doctor", "OnModuleCompleted");
-        buildContext.sendMessage("Jeopardy", "SetAttempts", (data.nofearAttemptsRemaining == null ? 2 : data.nofearAttemptsRemaining));
+        buildContext.sendMessage("Jeopardy", "SetAttempts", (data.nofearAttemptsRemaining == null ? maxAttempts : data.nofearAttemptsRemaining));
     }
     // Bind Unity SceneLoaded event to -> HandleSceneLoaded() above
     useEffect(() => {
@@ -89,7 +90,7 @@ function NoFearAct(){
             data["nofearDartsCompleted"] = false;
             data["nofearDoctorCompleted"] = false;
             data["nofearProgress"] = 0;
-            data["nofearAttemptsRemaining"] = 2;
+            data["nofearAttemptsRemaining"] = maxAttempts;
             data["nofearCompletionTime"] = Timestamp.now();
 
             // Save Doc
@@ -128,7 +129,7 @@ function NoFearAct(){
                 data["nofearDartsCompleted"] = false;
                 data["nofearDoctorCompleted"] = false;
                 data["nofearProgress"] = 0;
-                data["nofearAttemptsRemaining"] = 2;
+                data["nofearAttemptsRemaining"] = maxAttempts;
             }
             // If have more attempts update attempts remaning
             else
