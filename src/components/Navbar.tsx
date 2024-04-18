@@ -3,7 +3,7 @@ import './components.css'
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase.ts';
 import { useLocation } from 'react-router-dom';
-import { getUserData } from "../components/firestoreUtils.tsx";
+import { getUserData } from "./firestoreUtils.tsx";
 import { useState, useEffect } from "react";
 
 

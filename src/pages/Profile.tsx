@@ -5,15 +5,16 @@ import { auth, database } from "../firebase.ts";
 import { useLocation } from 'react-router-dom';
 import { getUserData } from "../components/firestoreUtils.tsx";
 import "../components/profile.css"
+import { Timestamp } from "firebase/firestore";
 
 interface UserData {
 
     firstName: string;
     lastName: string;
     squadron: string;
-    nofearCompletionTime: string;
-    recordsCompletionTime: string;
-    stinfoCompletionTime: string;
+    nofearCompletionTime: Timestamp;
+    recordsCompletionTime: Timestamp;
+    stinfoCompletionTime: Timestamp;
     nofearProgress: number;
     recordsProgress: number;
     stinfoProgress: number;
