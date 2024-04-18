@@ -8,6 +8,7 @@ import ResizeableBox from './components/ResizeableBox.tsx'
 import Navbar from './components/Navbar.tsx'
 import Signin from './pages/Signin.tsx'
 import NoFearAct from './pages/NoFearAct.tsx'
+import Records from './pages/Records.tsx'
 
 
 
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/records",
-    element: <><Navbar /><h1>Records Management Training</h1></>,
+    element: <><Navbar /><h1>Records Management Training</h1><Records></Records></>,
   },
   {
   path: "/management",

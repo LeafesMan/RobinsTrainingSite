@@ -3,17 +3,14 @@
 import "../components/components.css"
 import GetBuildContext from "../components/UnityGame";
 import { Unity } from "react-unity-webgl";
-import {  useCallback, useEffect, useState } from "react";
+import {  useCallback, useEffect } from "react";
 import { ReactUnityEventParameter } from "react-unity-webgl/distribution/types/react-unity-event-parameters";
-import { GetActiveUserEmail, GetDoc, GetUserData, SetDoc, auth } from "../firebase";
+import { GetActiveUserEmail, GetUserData, SetDoc } from "../firebase";
 import { Timestamp } from "firebase/firestore";
 
 
 function NoFearAct(){
     const buildContext = GetBuildContext("nofearact");
-
-
-    const [completedModule, setCompletedModule] = useState("");
 
 
 
@@ -26,10 +23,10 @@ function NoFearAct(){
         const email = GetActiveUserEmail();
         const data = await GetUserData(email);
 
-        if(data.ActsCompleted) buildContext.sendMessage("Acts", "OnModuleCompleted");
-        if(data.DartsCompleted) buildContext.sendMessage("Darts", "OnModuleCompleted");
-        if(data.DoctorCompleted) buildContext.sendMessage("Doctor", "OnModuleCompleted");
-        buildContext.sendMessage("Jeopardy", "SetAttempts", data.AttemptsRemaining);
+        if(data.nofearActsCompleted) buildContext.sendMessage("Acts", "OnModuleCompleted");
+        if(data.nofearDartsCompleted) buildContext.sendMessage("Darts", "OnModuleCompleted");
+        if(data.nofearDoctorCompleted) buildContext.sendMessage("Doctor", "OnModuleCompleted");
+        buildContext.sendMessage("Jeopardy", "SetAttempts", (data.nofearAttemptsRemaining == null ? 2 : data.nofearAttemptsRemaining));
     }
     // Bind Unity SceneLoaded event to -> HandleSceneLoaded() above
     useEffect(() => {
@@ -55,8 +52,12 @@ function NoFearAct(){
 
         // Get Module Name amd Save Module Completed
         const moduleNameString = moduleName?.toString()
-        if(moduleNameString != undefined)
-            data[moduleNameString + "Completed"] = true;
+        if(moduleNameString != undefined){
+            data["nofear" + moduleNameString + "Completed"] = true;
+
+            const modulesCompleted = (data["nofearActsCompleted"] ? 1 : 0) + (data["nofearDartsCompleted"] ? 1 : 0) + (data["nofearDoctorCompleted"] ? 1 : 0);
+            data["nofear" + "Progress"] = modulesCompleted / 4;
+        }
 
         // Save Doc
         SetDoc(data, "users/" + email);
@@ -84,10 +85,11 @@ function NoFearAct(){
             const data = await GetUserData(email);
 
 
-            data["ActsCompleted"] = false;
-            data["DartsCompleted"] = false;
-            data["DoctorCompleted"] = false;
-            data["AttemptsRemaining"] = 2;
+            data["nofearActsCompleted"] = false;
+            data["nofearDartsCompleted"] = false;
+            data["nofearDoctorCompleted"] = false;
+            data["nofearProgress"] = 0;
+            data["nofearAttemptsRemaining"] = 2;
             data["nofearCompletionTime"] = Timestamp.now();
 
             // Save Doc
@@ -120,16 +122,17 @@ function NoFearAct(){
             if(attemptsRemainingNum == undefined) throw new Error("Attemps Remaining is Not a Number!");
 
 
-            // If no more fails reset all NoFearAct Vars
+            // If no more fails reset all nofearAct Vars
             if(attemptsRemainingNum <= 0){
-                data["ActsCompleted"] = false;
-                data["DartsCompleted"] = false;
-                data["DoctorCompleted"] = false;
-                data["AttemptsRemaining"] = 2;
+                data["nofearActsCompleted"] = false;
+                data["nofearDartsCompleted"] = false;
+                data["nofearDoctorCompleted"] = false;
+                data["nofearProgress"] = 0;
+                data["nofearAttemptsRemaining"] = 2;
             }
             // If have more attempts update attempts remaning
             else
-                data["AttemptsRemaining"] = attemptsRemainingNum;
+                data["nofearAttemptsRemaining"] = attemptsRemainingNum;
            
 
             // Save Doc
