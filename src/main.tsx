@@ -9,6 +9,11 @@ import Navbar from './components/Navbar.tsx'
 import Signin from './pages/Signin.tsx'
 import NoFearAct from './pages/NoFearAct.tsx'
 import Records from './pages/Records.tsx'
+import STINFO from './pages/STINFO.tsx';
+import Dashboard from './pages/Dashboard.tsx'
+import Profile from './pages/Profile.tsx'
+import Certs from './pages/Certs.tsx'
+import ForgotPassword from './pages/ForgotPassword.tsx'
 
 
 
@@ -17,6 +22,10 @@ const router = createBrowserRouter([
   {
   path: "/",
   element: <><Navbar /><h1>Home</h1></>,
+  },
+  {
+    path:"/dashboard",
+    element: <Dashboard />,
   },
   {
   path: "/signup",
@@ -28,7 +37,7 @@ const router = createBrowserRouter([
   },
   {
   path: "/stinfo",
-  element: <><Navbar /><h1>STINFO Training</h1></>,
+  element: <><Navbar /><h1>STINFO Training</h1><STINFO/></>,
   },
   {
     path: "/nofear",
@@ -41,6 +50,18 @@ const router = createBrowserRouter([
   {
   path: "/management",
   element: <><Navbar /><h1>Management</h1></>,
+  },
+  {
+    path:"/profile",
+    element: <Profile />,
+  },
+  {
+    path: "/certificates",
+    element: <Certs />,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPassword />,
   },
 ])
 
