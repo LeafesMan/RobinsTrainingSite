@@ -1,0 +1,919 @@
+fileFormatVersion: 2
+guid: 881011ea5a70e48f7b028b2688ec5cde
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1135
+        width: 220
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5080c5568ee5c468eb128fa73a4c7d0a
+      internalID: -1073545460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1134
+        width: 221
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3690a4d78973d448ea853450c76b37c7
+      internalID: -496748443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1134
+        width: 212
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a61fa35f52b4c8d895c3798b09b669
+      internalID: -490003133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1136
+        width: 197
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ac7844f67df4391a43d1c17601d087
+      internalID: 1518956144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 1133
+        width: 178
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd00e7b61ff014b69b81cea592b6e45a
+      internalID: 493223284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1125
+        width: 169
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea790ccc88b841779a5cc1eef12b73b
+      internalID: -800197517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 896
+        width: 181
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98315957baba4b59b453bcea2b6d456
+      internalID: -298198510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 892
+        width: 189
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153c21c26abb142d9a34e28eb6368847
+      internalID: -1406748747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 891
+        width: 193
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db63501bb69644f2b06c506a6b3df15
+      internalID: 48647662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 893
+        width: 193
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec0ffb490c604eff86139312fc68d0f
+      internalID: -1513710533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 896
+        width: 194
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed15f605cb664b83b1c9d66e76ea9ff
+      internalID: 781230120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 902
+        width: 190
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373d0cf3eaee84e49acb6c047ed6bfcf
+      internalID: -2006340613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 685
+        width: 181
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa887393bf1243179b898fa6f856442
+      internalID: -812659716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 695
+        width: 168
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93135895c34e94612b78919eea9f7f54
+      internalID: 196764261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 701
+        width: 178
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6147c4acc10954f17a552aed3e47a6ff
+      internalID: 1454439930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 695
+        width: 197
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae155cae27294c8888cc7c97b1762c1
+      internalID: -1085633083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 692
+        width: 212
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d59ad6f4e78f4c28bef325a9dd890bf
+      internalID: 1877741728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 690
+        width: 221
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a005adf2f6cd43a6857d18c07bfec33
+      internalID: -1698989107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 465
+        width: 220
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00adc4da5cc604cf1bf290cd6cc8238d
+      internalID: -1461309770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 466
+        width: 216
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d29b9add7dee4be995b5f13f8785fca
+      internalID: -2041885586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 468
+        width: 208
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe1ce804b23543ba97c2e05e3c74636
+      internalID: -707147065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 472
+        width: 197
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b67fe7ec695e44a7a49c78983b7b3ad
+      internalID: 325757329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 476
+        width: 178
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37f4af8a81bf4f99b77fecb725cb028
+      internalID: 289289190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 471
+        width: 161
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c79a51cddbee40babfa5d9db129ab8b
+      internalID: 171953745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 237
+        width: 168
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f71a977b0f14aa090f20adec7c594f
+      internalID: -2110118011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 230
+        width: 176
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22cc496f66b574fecbcdfb01b886ca94
+      internalID: 891625435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 224
+        width: 179
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f371083c741a246cfadc59de46e941e1
+      internalID: -1300730197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 221
+        width: 177
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e70bdb1d2a642189aaca56acfd65d2
+      internalID: -32641410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 219
+        width: 178
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d771ae51463cd4a01bc0041c89715e1e
+      internalID: 1527099152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 220
+        width: 176
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012aa97dedcbf4a289f7a23f6af1ed6a
+      internalID: -1116629776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 168
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc3a7c68ed7e4d83b1ab781d5e78577
+      internalID: 1781468771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 5
+        width: 161
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdea04c852ab4a27ad6bd245ded78ea
+      internalID: 1032985338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 13
+        width: 177
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70a479741d53452ca164708af2f0ab4
+      internalID: -440535136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 16
+        width: 197
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb057b7aa1e04b4994e74f61b038683
+      internalID: 1795367166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 14
+        width: 208
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b14d1134d5648fc9a39b7cd2ea3910
+      internalID: -1753063435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fighter Plane Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 14
+        width: 216
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddcffae74a60049a08eaad47c2a829cd
+      internalID: 1924471689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Fighter Plane Sprite Sheet_0: -1073545460
+      Fighter Plane Sprite Sheet_1: -496748443
+      Fighter Plane Sprite Sheet_10: 781230120
+      Fighter Plane Sprite Sheet_11: -2006340613
+      Fighter Plane Sprite Sheet_12: -812659716
+      Fighter Plane Sprite Sheet_13: 196764261
+      Fighter Plane Sprite Sheet_14: 1454439930
+      Fighter Plane Sprite Sheet_15: -1085633083
+      Fighter Plane Sprite Sheet_16: 1877741728
+      Fighter Plane Sprite Sheet_17: -1698989107
+      Fighter Plane Sprite Sheet_18: -1461309770
+      Fighter Plane Sprite Sheet_19: -2041885586
+      Fighter Plane Sprite Sheet_2: -490003133
+      Fighter Plane Sprite Sheet_20: -707147065
+      Fighter Plane Sprite Sheet_21: 325757329
+      Fighter Plane Sprite Sheet_22: 289289190
+      Fighter Plane Sprite Sheet_23: 171953745
+      Fighter Plane Sprite Sheet_24: -2110118011
+      Fighter Plane Sprite Sheet_25: 891625435
+      Fighter Plane Sprite Sheet_26: -1300730197
+      Fighter Plane Sprite Sheet_27: -32641410
+      Fighter Plane Sprite Sheet_28: 1527099152
+      Fighter Plane Sprite Sheet_29: -1116629776
+      Fighter Plane Sprite Sheet_3: 1518956144
+      Fighter Plane Sprite Sheet_30: 1781468771
+      Fighter Plane Sprite Sheet_31: 1032985338
+      Fighter Plane Sprite Sheet_32: -440535136
+      Fighter Plane Sprite Sheet_33: 1795367166
+      Fighter Plane Sprite Sheet_34: -1753063435
+      Fighter Plane Sprite Sheet_35: 1924471689
+      Fighter Plane Sprite Sheet_4: 493223284
+      Fighter Plane Sprite Sheet_5: -800197517
+      Fighter Plane Sprite Sheet_6: -298198510
+      Fighter Plane Sprite Sheet_7: -1406748747
+      Fighter Plane Sprite Sheet_8: 48647662
+      Fighter Plane Sprite Sheet_9: -1513710533
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
