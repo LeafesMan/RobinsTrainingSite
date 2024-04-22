@@ -37,15 +37,12 @@ function STINFO(){
     
     // Handle saving data to the database
     const  handleSaveGame = useCallback((attemptsLeft: any, userAnsResult: any, buttonAnswerChoice: any, currentScreen: any, trainingCompleted: any) => {
-    //const  handleSaveGame = useCallback((attemptsLeft: any, userAnsResult: any, buttonAnswerChoice: any, trainingCompleted: any) => {
 
         UpdateSavedData(attemptsLeft, userAnsResult, buttonAnswerChoice, currentScreen, trainingCompleted);
-        //UpdateSavedData(attemptsLeft, userAnsResult, buttonAnswerChoice, trainingCompleted);
 
     }, []);
 
-    async function UpdateSavedData(attemptsLeft: number, userAnsResult: boolean[], buttonAnswerChoice: string[], currentScreen: number, trainingCompleted: number){
-    //async function UpdateSavedData(attemptsLeft: number, userAnsResult: boolean[], buttonAnswerChoice: string[], trainingCompleted: number){    
+    async function UpdateSavedData(attemptsLeft: number, userAnsResult: boolean[], buttonAnswerChoice: string[], currentScreen: number, trainingCompleted: number){ 
         // Get Email
         const email = GetActiveUserEmail();
         const data = await GetUserData(email);
@@ -55,21 +52,11 @@ function STINFO(){
         data["STINFOButtonAnswerChoice"] = buttonAnswerChoice;
         data["STINFOCurrentScreen"] = currentScreen;
         data["STINFOTrainingCompleted"] = trainingCompleted;
+        const currentProgress = (currentScreen / 30 * 100).toFixed(2);
+        data["stinfoCompletionTime"] = currentProgress;
         if(trainingCompleted === 1) {
             data["stinfoCompletionTime"] = Timestamp.now();
         }
-
-        console.log("STINFOAttemptsLeft has updated to: " + attemptsLeft);
-        console.log("STINFOAttemptsLeft type is: " + typeof attemptsLeft);
-
-        console.log("STINFOUserAnsResult has updated to: " + userAnsResult);
-        console.log("STINFOUserAnsResult type is : " + typeof userAnsResult);
-
-        console.log("STINFOButtonAnswerChoice has updated to: " + buttonAnswerChoice);
-        console.log("STINFOButtonAnswerChoice type is : " + typeof buttonAnswerChoice);
-
-        console.log("STINFOTrainingCompleted has updated to : " + trainingCompleted);
-        console.log("STINFOTrainingCompleted type is : " + typeof trainingCompleted);
 
         // Save Doc
         SetDoc(data, "users/" + email);
