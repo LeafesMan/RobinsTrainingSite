@@ -12,10 +12,65 @@ import { Timestamp } from "firebase/firestore";
 function STINFO(){
     const buildContext = GetBuildContext("STINFO");
 
+    function handleSceneLoaded(){
+        LoadUnityProgress();
+    }
 
+    async function LoadUnityProgress(){
+        const email = GetActiveUserEmail();
+        const data = await GetUserData(email);
+
+        buildContext.sendMessage("Game Manager", "LoadGameAttempt", data.STINFOAttemptsLeft);
+        buildContext.sendMessage("Game Manager", "LoadUserAnswers", data.STINFOUserAnsResult);
+        buildContext.sendMessage("Game Manager", "LoadButtonIndex", data.STINFOButtonAnswerChoice);
+        buildContext.sendMessage("Game Manager", "LoadCurrentScreen", data.STINFOCurrentScreen);
+        buildContext.sendMessage("Game Manager", "LoadTrainingStatus", data.STINFOTrainingCompleted);
+    }
+
+    // Bind Unity SceneLoaded event to -> HandleSceneLoaded() above
+    useEffect(() => {
+        buildContext.addEventListener("LoadGameFromDatabase", handleSceneLoaded);
+        return () => {
+            buildContext.removeEventListener("LoadGameFromDatabase", handleSceneLoaded);
+        };
+    }, [buildContext.addEventListener, buildContext.removeEventListener, handleSceneLoaded]);
+    
+    // Handle saving data to the database
+    const  handleSaveGame = useCallback((attemptsLeft: any, userAnsResult: any, buttonAnswerChoice: any, currentScreen: any, trainingCompleted: any) => {
+
+        UpdateSavedData(attemptsLeft, userAnsResult, buttonAnswerChoice, currentScreen, trainingCompleted);
+
+    }, []);
+
+    async function UpdateSavedData(attemptsLeft: number, userAnsResult: boolean[], buttonAnswerChoice: string[], currentScreen: number, trainingCompleted: number){ 
+        // Get Email
+        const email = GetActiveUserEmail();
+        const data = await GetUserData(email);
+
+        data["STINFOAttemptsLeft"] = attemptsLeft;
+        data["STINFOUserAnsResult"] = userAnsResult;
+        data["STINFOButtonAnswerChoice"] = buttonAnswerChoice;
+        data["STINFOCurrentScreen"] = currentScreen;
+        data["STINFOTrainingCompleted"] = trainingCompleted;
+        const currentProgress = (currentScreen / 30 * 100).toFixed(2);
+        data["stinfoCompletionTime"] = currentProgress;
+        if(trainingCompleted === 1) {
+            data["stinfoCompletionTime"] = Timestamp.now();
+        }
+
+        // Save Doc
+        SetDoc(data, "users/" + email);
+    }
+
+    useEffect(() => {
+        buildContext.addEventListener("SaveGameToDatabase", handleSaveGame);
+        return () => {
+            buildContext.removeEventListener("SaveGameToDatabase", handleSaveGame);
+        };
+    }, [buildContext.addEventListener, buildContext.removeEventListener, handleSaveGame]);
     
     return <>
-    <Unity unityProvider={buildContext.unityProvider} className="UnityGame"/>
+        <Unity unityProvider={buildContext.unityProvider} className="UnityGame"/>
     </>;
 }
 
