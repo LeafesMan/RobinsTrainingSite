@@ -52,10 +52,11 @@ function STINFO(){
         data["STINFOButtonAnswerChoice"] = buttonAnswerChoice;
         data["STINFOCurrentScreen"] = currentScreen;
         data["STINFOTrainingCompleted"] = trainingCompleted;
-        const currentProgress = (currentScreen / 30 * 100).toFixed(2);
+        const currentProgress = (currentScreen / 30 * 100).toFixed(0);
         data["stinfoProgress"] = currentProgress;
         if(trainingCompleted === 1) {
             data["stinfoCompletionTime"] = Timestamp.now();
+            data["stinfoProgress"] = 100;
         }
 
         // Save Doc
