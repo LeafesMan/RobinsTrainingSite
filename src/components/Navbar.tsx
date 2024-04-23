@@ -5,6 +5,7 @@ import { auth } from '../firebase.ts';
 import { useLocation } from 'react-router-dom';
 import { getUserData } from "../components/firestoreUtils.tsx";
 import { useState, useEffect } from "react";
+import SendEmail from './EmailJS.ts';
 
 
 interface UserData {
@@ -44,7 +45,7 @@ function Navbar() {
 
 
     return <div className='navbar'>
-        <div className='floatLeft libutton' onClick={() => navigate("/stinfo")}> STINFO</div>
+        <div className='floatLeft libutton' onClick={() => navigate("/stinfo") }> STINFO</div>
         <div className='floatLeft libutton' onClick={() => navigate("/nofear")}> No Fear Act</div>
         <div className='floatLeft libutton' onClick={() => navigate("/records")}> Records Management</div>
 

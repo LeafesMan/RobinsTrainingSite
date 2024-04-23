@@ -56,7 +56,7 @@ function NoFearAct(){
         if(moduleNameString != undefined){
             data["nofear" + moduleNameString + "Completed"] = true;
 
-            const modulesCompleted = (data["nofearActsCompleted"] ? 1 : 0) + (data["nofearDartsCompleted"] ? 1 : 0) + (data["nofearDoctorCompleted"] ? 1 : 0);
+            const modulesCompleted = (data["nofearActsCompleted"] ? 1 : 0) + (data["nofearDartsCompleted"] ? 1 : 0) + (data["nofearDoctorCompleted"] ? 1 : 0) * 100;
             data["nofear" + "Progress"] = modulesCompleted / 4;
         }
 
