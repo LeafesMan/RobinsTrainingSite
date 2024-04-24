@@ -5,15 +5,19 @@ import { auth, database } from "../firebase.ts";
 import { useLocation } from 'react-router-dom';
 import { getUserData } from "../components/firestoreUtils.tsx";
 import "../components/certs.css"
+import { Timestamp } from "firebase/firestore";
+import ReactDOM from 'react-dom';
+import { PDFViewer } from '@react-pdf/renderer';
+import Certificate from '../components/Certificate.tsx'
 
 interface UserData {
 
     firstName: string;
     lastName: string;
     squadron: string;
-    nofearCompletionTime: string;
-    recordsCompletionTime: string;
-    stinfoCompletionTime: string;
+    nofearCompletionTime: Timestamp;
+    recordsCompletionTime: Timestamp;
+    stinfoCompletionTime: Timestamp;
     nofearProgress: number;
     recordsProgress: number;
     stinfoProgress: number;
@@ -21,7 +25,7 @@ interface UserData {
 }
 
 function Certs() {
-    const [userData, setUserData] = useState<UserData | null>(null); 
+    const [userData, setUserData] = useState<UserData | null>(null);
     const [email, setEmail] = useState();
 
     useEffect(() => {
@@ -53,6 +57,13 @@ function Certs() {
                         <div style={{ textAlign: 'center' }}>
                             <h2>Your Achieved Certificates</h2>
                         </div>
+                        <PDFViewer width="1000" height="600">
+                            <Certificate
+                                recipientName={`${userData.firstName} ${userData.lastName}`}
+                                courseName="React Fundamentals"
+                                completionDate={userData.nofearCompletionTime.toDate()}
+                            />
+                        </PDFViewer>
                     </>
 
                 ) : (
