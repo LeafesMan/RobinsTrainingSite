@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -16,18 +14,11 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playButton.gameObject.SetActive(true);
+        // Set up button listeners
         playButton.onClick.AddListener(Play);
-
-        instructionsButton.gameObject.SetActive(true);
         instructionsButton.onClick.AddListener(Instructions);
-
-        recordManagementButton.gameObject.SetActive(true);
         recordManagementButton.onClick.AddListener(RecordsManagement);
-
-        quitButton.gameObject.SetActive(true);
         quitButton.onClick.AddListener(OnApplicationQuit);
-
     }
 
     // Loading game space when play button is pressed
@@ -53,5 +44,4 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
-
 }

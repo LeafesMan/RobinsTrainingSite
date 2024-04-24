@@ -44,8 +44,9 @@ public class Instructions : MonoBehaviour
 
     public void Menu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene("Main Menu");
     }
+
 
     // Update is called once per frame
     void Update()

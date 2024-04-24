@@ -180,14 +180,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "                                                 Scoring:\n\nIncorrect
-    Match: +1 points\n\nBest times are recorded.\n\n\n                                      
-    Game Over Conditions:\n\nYou complete all rounds within the time limit.\n\nYou
-    exceed the limit of 5 incorrect matches.\n\nGood luck and have fun playing Memory
-    Matching: Word Edition!"
+  m_text: "Scoring:\n\nCorrect Match: One point\nMust collect 4 points to Continue\nBest
+    times are recorded.\n\n Game Over Conditions:\n\nYou complete all rounds within
+    the time limit.\nYou exceed the limit of 5 incorrect matches.\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8e0f2eb9da0644f238a63f02da0c13fc, type: 2}
+  m_sharedMaterial: {fileID: 2805994301032696971, guid: 8e0f2eb9da0644f238a63f02da0c13fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -211,14 +209,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -247,7 +245,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -378.57455, y: -232.72632, z: -391.6554, w: -235.28287}
+  m_margin: {x: -297.6359, y: -232.72632, z: -299.92487, w: -235.28287}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -329,8 +327,8 @@ Canvas:
   m_GameObject: {fileID: 336507685}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1718321410}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -915,21 +913,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "                                                              Gameplay:\n\nMatching
-    Cards: You will be presented with a set of cards, each containing  either a word/term
-    or its corresponding definition.\n\nMatching Process: To play, simply click on
-    two cards to flip them over and reveal their content. If the word/term and its
-    definition match, they will disappear.. If not, they will be flipped back face
-    down, the and you can try again \n\nTime Limit: Each round has a time limit.
-    You must match all the cards within the given time to proceed to the next round.
-    Keep an eye on the timer at the top of the screen!\n\nIncorrect Answers: Be careful!
-    You are allowed only 5 incorrect matches throughout the entire game. If you exceed
-    this limit, the game will end, and your score will be recorded.\n\nMultiple Rounds:
-    There are multiple rounds of increasing difficulty. As you progress, more cards
-    will be added, making the matching process more challenging."
+  m_text: "Gameplay:\n\nMatching Cards: You will be presented with a set of cards,
+    each containing  either a word/term or its corresponding definition.\n\nMatching
+    Process: To play, simply click on two cards to flip them over and reveal their
+    content. If the word/term and its definition match, they will disappear.. If
+    not, they will be flipped back face down, the and you can try again \n\nTime
+    Limit: Each round has a time limit. You must match all the cards within the given
+    time to proceed to the next round. Keep an eye on the timer at the top of the
+    screen!\n\nIncorrect Answers: Be careful! You are allowed only 5 incorrect matches
+    throughout the entire game. If you exceed this limit, the game will end, and
+    your score will be recorded.\n\nMultiple Rounds: There are multiple rounds of
+    increasing difficulty. As you progress, more cards will be added, making the
+    matching process more challenging."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8e0f2eb9da0644f238a63f02da0c13fc, type: 2}
+  m_sharedMaterial: {fileID: 2805994301032696971, guid: 8e0f2eb9da0644f238a63f02da0c13fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -953,14 +951,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -989,7 +987,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -384.6881, y: -232.72632, z: -369.23886, w: -203.18637}
+  m_margin: {x: -329.54056, y: -232.72632, z: -338.678, w: -278.35077}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1062,8 +1060,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8e0f2eb9da0644f238a63f02da0c13fc, type: 2}
+  m_sharedMaterial: {fileID: 2805994301032696971, guid: 8e0f2eb9da0644f238a63f02da0c13fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1194,14 +1192,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "                                                     Tips for Success:\n\nMemorize:
-    Pay close attention to the words/terms and their definitions as you flip the
-    cards.\n\nFocus: Concentrate on one pair at a time to avoid confusion.\n\nSpeed:
-    Try to match the cards as quickly as possible to maximize your score.\n\n                                                         
-    Controls:\n\nMouse Click: Click on a card to flip it over and reveal its content."
+  m_text: 'Tips for Success:
+
+
+    Memorize: Pay close attention to the words/terms
+    and their definitions as you flip the cards.
+
+
+    Focus: Concentrate on one
+    pair at a time to avoid confusion.
+
+
+    Speed: Try to match the cards as quickly
+    as possible to maximize your score.
+
+
+    Controls:
+
+
+    Mouse Click: Click
+    on a card to flip it over and reveal its content.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8e0f2eb9da0644f238a63f02da0c13fc, type: 2}
+  m_sharedMaterial: {fileID: 2805994301032696971, guid: 8e0f2eb9da0644f238a63f02da0c13fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1225,14 +1238,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1261,7 +1274,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -372.4609, y: -230.43373, z: -389.61755, w: -258.20895}
+  m_margin: {x: -296.91812, y: -230.43373, z: -301.48434, w: -258.20895}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1311,7 +1324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: -250}
+  m_AnchoredPosition: {x: -70, y: -300}
   m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582144090
@@ -1431,7 +1444,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1202, y: 615}
+  m_SizeDelta: {x: 1000, y: 665}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1698751548
 MonoBehaviour:
@@ -1505,7 +1518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -8}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714951884
@@ -1530,8 +1543,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MAIN MENU
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8e0f2eb9da0644f238a63f02da0c13fc, type: 2}
+  m_sharedMaterial: {fileID: 2805994301032696971, guid: 8e0f2eb9da0644f238a63f02da0c13fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1555,8 +1568,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1860,7 +1873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 250}
+  m_AnchoredPosition: {x: 0, y: 300}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1852577648
@@ -1981,7 +1994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: -250}
+  m_AnchoredPosition: {x: 70, y: -300}
   m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005439322
@@ -2102,7 +2115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -250}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087983592
