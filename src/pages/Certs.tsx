@@ -61,19 +61,6 @@ function Certs() {
         }
     }, [email]);
 
-
-    async function handleViewCertificate(cert: DocumentData) {
-        <ViewCertificate
-            firstName={cert.firstName}
-            lastName={cert.lastName}
-            courseName={cert.courseName}
-            completionDate={cert.completionDate}
-            userEmail={cert.user}
-        />
-
-    }
-
-
     return (
         <>
             <Navbar />
