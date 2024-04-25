@@ -91,7 +91,7 @@ function Certs() {
                                                     lastName={cert.lastName}
                                                     courseName={cert.courseName}
                                                     completionDate={cert.completionDate}
-                                                    userEmail={cert.id}
+                                                    userEmail={cert.userEmail}
                                                 />
                                             </td>
                                         </tr>

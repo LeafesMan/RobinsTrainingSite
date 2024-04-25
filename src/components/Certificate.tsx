@@ -63,6 +63,7 @@ const Certificate: React.FC<CertificateProps> = ({ firstName, lastName, courseNa
 
     try {
       // Retrieve the document snapshot by invoking GetDoc
+      console.log(certPath)
       const docSnapshot = await GetDoc(certPath);
       if (docSnapshot.exists()) {
         console.log("Certificate already exists in Firestore.");
