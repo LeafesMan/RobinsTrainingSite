@@ -3,16 +3,38 @@
 import "../components/components.css"
 import GetBuildContext from "../components/UnityGame";
 import { Unity } from "react-unity-webgl";
-import {  useCallback, useEffect } from "react";
+import {  useCallback, useEffect, useState } from "react";
 import { ReactUnityEventParameter } from "react-unity-webgl/distribution/types/react-unity-event-parameters";
 import { GetActiveUserEmail, GetUserData, SetDoc } from "../firebase";
 import { Timestamp } from "firebase/firestore";
+import DownloadCertificate from "../components/DownloadCertificate";
+import SendEmail from "../components/EmailJS";
 
 const maxAttempts = 3;
 
 function NoFearAct(){
     const buildContext = GetBuildContext("nofearact");
 
+
+
+    const [completed, setCompleted] = useState(false);
+    const [email, setEmail] = useState("");
+    const [userData, setUserData] = useState<any>({});
+    const [initDone, setInitDone] = useState(false);
+    if(!initDone){
+        Init();
+    }
+    async function Init(){
+        setInitDone(true);
+
+        const email = await GetActiveUserEmail();
+        const data = await GetUserData(email);
+
+        setEmail(email);
+        setUserData(data);
+    }
+
+    
 
 
 
@@ -93,6 +115,11 @@ function NoFearAct(){
             data["nofearAttemptsRemaining"] = maxAttempts;
             data["nofearCompletionTime"] = Timestamp.now();
 
+
+            setCompleted(true);
+            SendEmail(email, "No Fear Act");
+
+
             // Save Doc
             SetDoc(data, "users/" + email);
         }
@@ -148,9 +175,19 @@ function NoFearAct(){
     
 
 
-    return <>
-    <Unity unityProvider={buildContext.unityProvider} className="UnityGame"/>
-    </>;
+        return <>
+        {!completed ? 
+            <Unity unityProvider={buildContext.unityProvider} className="UnityGame"/> 
+            : 
+            <DownloadCertificate
+                    firstName={userData.firstName}
+                    lastName={userData.lastName}
+                    courseName={"Records Management"}
+                    completionDate={Timestamp.now()}
+                    userEmail={email}
+                />
+        }
+        </>;
 }
 
 

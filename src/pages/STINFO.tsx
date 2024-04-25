@@ -7,10 +7,35 @@ import {  useCallback, useEffect, useState } from "react";
 import { ReactUnityEventParameter } from "react-unity-webgl/distribution/types/react-unity-event-parameters";
 import { GetActiveUserEmail, GetDoc, GetUserData, SetDoc, auth } from "../firebase";
 import { Timestamp } from "firebase/firestore";
+import DownloadCertificate from "../components/DownloadCertificate";
+import SendEmail from "../components/EmailJS";
 
 
 function STINFO(){
-    const buildContext = GetBuildContext("STINFO");
+    const buildContext = GetBuildContext("stinfo");
+
+    const [completed, setCompleted] = useState(false);
+    const [email, setEmail] = useState("");
+    const [userData, setUserData] = useState<any>({});
+    const [initDone, setInitDone] = useState(false);
+    if(!initDone){
+        Init();
+    }
+    async function Init(){
+        setInitDone(true);
+
+        const email = await GetActiveUserEmail();
+        const data = await GetUserData(email);
+
+        setEmail(email);
+        setUserData(data);
+    }
+
+
+
+
+
+
 
     function handleSceneLoaded(){
         LoadUnityProgress();
@@ -59,6 +84,13 @@ function STINFO(){
             data["stinfoProgress"] = 100;
         }
 
+
+        // Completion
+        if(currentProgress == "100"){
+            setCompleted(true);
+            SendEmail(email, "STINFO");
+        }
+
         // Save Doc
         SetDoc(data, "users/" + email);
     }
@@ -71,7 +103,17 @@ function STINFO(){
     }, [buildContext.addEventListener, buildContext.removeEventListener, handleSaveGame]);
     
     return <>
-        <Unity unityProvider={buildContext.unityProvider} className="UnityGame"/>
+    {!completed ? 
+        <Unity unityProvider={buildContext.unityProvider} className="UnityGame"/> 
+        : 
+        <DownloadCertificate
+                firstName={userData.firstName}
+                lastName={userData.lastName}
+                courseName={"Records Management"}
+                completionDate={Timestamp.now()}
+                userEmail={email}
+            />
+    }
     </>;
 }
 
