@@ -79,7 +79,7 @@ function Dashboard(): JSX.Element {
                             <br></br>
 
                             {userData.admin === true ? (
-                                <>
+                                <div>
                                     <div className="container">
                                         <h2>All User's Data</h2>
                                         <table>
@@ -111,7 +111,7 @@ function Dashboard(): JSX.Element {
                                             </tbody>
                                         </table>
                                     </div>
-                                </>
+                                </div>
                             ) : (
                                 <p>You're a regular user.</p>
                             )}

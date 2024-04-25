@@ -15,7 +15,7 @@ interface DownloadCertificateProps {
 const DownloadCertificate: React.FC<DownloadCertificateProps> = ({ firstName, lastName, courseName, completionDate, userEmail }) => {
     
     return (
-        <>
+        <div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <PDFDownloadLink
                     document={
@@ -35,7 +35,7 @@ const DownloadCertificate: React.FC<DownloadCertificateProps> = ({ firstName, la
                 </PDFDownloadLink>
             </div>
 
-        </>
+        </div>
 
     );
 }

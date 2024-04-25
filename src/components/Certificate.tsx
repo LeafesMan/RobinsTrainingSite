@@ -1,7 +1,6 @@
-import React from 'react';
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
-import { SetDoc, GetDoc, auth } from "../firebase.ts";
+import { SetDoc, GetDoc } from "../firebase.ts";
 import USAF_Logo from '../images/USAF_Logo.png';
 import { Timestamp } from 'firebase/firestore';
 
