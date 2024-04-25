@@ -12,7 +12,6 @@ interface Props {
         firstName?: string,
         lastName?: string,
         squadron?: string,
-        role?: 'user'
     },
     onSubmit: (e: React.FormEvent) => void,
     onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void,

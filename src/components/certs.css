@@ -2,3 +2,39 @@
     display: flex;
     justify-content: center;
 }
+.cert-container {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    padding: 20px; /* Add padding around the container */
+    border-radius: 10px;
+    padding-top: 5px;
+    background-color: rgba(66, 50, 50, 0.45);
+}
+
+.cert-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cert-th,
+.cert-td {
+    padding: 10px;
+    text-align: center;
+}
+
+.cert-th {
+    background-color: #1b1818;
+    color: #ffffff;
+}
+
+.cert-tr:nth-child(even) {
+    background-color: #1b1818;
+}
+
+/* Style progress values */
+.cert-td:nth-child(3)::after,
+.cert-td:nth-child(5)::after,
+.cert-td:nth-child(7)::after {
+    content: '%';
+}
