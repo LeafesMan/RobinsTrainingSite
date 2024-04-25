@@ -64,7 +64,7 @@ function Signup() {
 
             await createUserWithEmailAndPassword(auth, signupData.email, signupData.password);
 
-            await SetDoc(userData, "users/" + signupData.email);
+            await SetDoc(userData, "users/" + signupData.email)
             
             console.log("SUCCESS: User created with email " + signupData.email);
             navigate("/signin");
