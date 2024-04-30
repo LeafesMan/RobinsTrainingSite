@@ -22,9 +22,7 @@ public class Instructions : MonoBehaviour
     public GameObject panel3;
 
     private bool isVisible = false;
-
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +44,7 @@ public class Instructions : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
-
-
+    
     // Update is called once per frame
     void Update()
     {

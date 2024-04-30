@@ -9,17 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 174cc5ca5eb634484be82b58a476c857
   - enabled: 1
-    path: Assets/Scenes/Game Scenes/DictionaryScene.unity
-    guid: ee73db389af174f56bb4ad151507b556
-  - enabled: 0
-    path: Assets/Scenes/Unused Scenes/GameScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: a5034712e512542048ac49d9aaafe612
   - enabled: 1
     path: Assets/Scenes/Records Management Overview.unity
     guid: 0349cb2f45f474954866bebd98efcd18
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/DictionaryScene.unity
+    guid: ee73db389af174f56bb4ad151507b556
   - enabled: 1
     path: Assets/Scenes/Game Scenes/DictionaryScene2.unity
     guid: 1f6a9473d45a444b89f961e54104fbc6
@@ -32,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/DictionaryScene5.unity
     guid: 49b64a9db1f1049c7894153d38fc527b
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: cc548033aa261444280494cdb753474d
   m_configObjects: {}

@@ -70,7 +70,7 @@ public class RecordsManagement : MonoBehaviour
 
     public void Menu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
     // Update is called once per frame
